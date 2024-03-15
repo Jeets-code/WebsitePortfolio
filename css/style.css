@@ -1,0 +1,144 @@
+body {
+    background-color: #000;
+    color: white;
+    margin: 0;
+    height: 100vh; /* Set the height to full viewport height */
+    overflow-x: hidden;
+} 
+
+#matrix-animation {
+    position: relative;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#matrix-canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow:hidden;
+    z-index: 0; /* Set a lower z-index for the matrix canvas */
+}
+
+#home {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#about-me {
+    position: relative;
+    top: 100%; /* Start at the end of the matrix canvas */
+    width: 100%; /* Take the full width of the viewport */
+    font-size: 40px;
+    font-style: bold;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    z-index: 1; /* Set a higher z-index for the about-me section to overlap the matrix animation */
+}
+
+/*header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px;
+    background: #11141a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+nav a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+ */
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    font-size: 100px;
+    color: #fff;
+    font-weight: 700;
+    width: 100%;
+}
+
+.navbar {
+    background-color: rgba(0,0,0,0) !important;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+    position: fixed;
+    width: 80%;
+    z-index: 2;  /* Set a higher z-index for the navbar to overlap everything else */
+    display: none;  /* Hide the navbar by default */
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 10px;
+    font-weight: bolder; 
+} 
+
+nav a:hover,
+nav a.active {
+    color: white;    
+} 
+
+
+.chat-container {
+    
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#chat-box {
+    
+    overflow-y: scroll;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+#user-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

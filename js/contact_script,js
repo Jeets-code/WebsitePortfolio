@@ -1,0 +1,11 @@
+function sendMessage() {
+    var userInput = document.getElementById("user-input").value;
+    if (userInput !== "") {
+        var chatBox = document.getElementById("chat-box");
+        var message = '<div><strong>You:</strong> ' + userInput + '</div>';
+        chatBox.innerHTML += message;
+        document.getElementById("user-input").value = "";
+        // Scroll to the bottom of the chat box
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+}
